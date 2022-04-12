@@ -6,6 +6,11 @@
    min-height: 389px;
    min-width: 320px;
    position: relative;
+   
+   @include media($lg) {
+      background-position-y: inherit;
+   }
+   
    &::after {
       content: '';
       position: absolute;
