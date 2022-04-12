@@ -1,0 +1,46 @@
+.intro {
+   background: url(../img/back-intro.jpg) no-repeat;
+   background-position: center;
+   background-size: cover;
+   width: 100%;
+   min-height: 389px;
+   min-width: 320px;
+   position: relative;
+   &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 55px;
+      background:url(../img/icons/intro-triangle.svg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      bottom: -1px;
+      left: 50%;
+      transform: translate(-50%, 0);
+   }
+
+   &__svg {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 280px;
+      min-height: 208px;
+      transition: width .3s ease-in, height .2s ease-in;
+
+      @include media($md){
+         width: 461px;
+         height: 349px;
+         padding-top: 49px;
+         padding-bottom: 34px;
+      }
+
+      @include media($lg){
+        padding-top: 37px;
+        padding-bottom: 32px;
+      }
+   }
+}

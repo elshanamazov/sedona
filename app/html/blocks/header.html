@@ -1,3 +1,27 @@
-<header>
-    Шапка сайта
+<header class="header">
+    <div class="container">
+     <div class="header__wrap">
+      <nav class="header__nav js-nav">
+        <a href="#" class="header__link">Главная</a>
+        <a href="#" class="header__link">Фото и видео</a>
+        <!-- <a href="#" class="header__logo-tablet">
+          <img class="logo-tablet logo" src="img/icons/logotype-tablet.svg" alt="Логотип">
+        </a>
+        <a href="#" class="header__logo-descktop">
+          <img class="logo-descktop logo" src="img/icons/logotype-desktop.svg" alt="Логотип">
+        </a>  -->
+        <picture class="header__logo">
+          <source srcset="img/icons/logotype-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="img/icons/logotype-tablet.svg" media="(min-width: 768px)">
+          <img class="logo" src="img/icons/logotype-mobile.svg" alt="Логотип сайта">
+        </picture>
+        <a href="#" class="header__link">Форма Отзыва</a>
+        <a href="#" class="header__link">Html Academy</a>
+     </nav>
+     <!-- <a href="#" class="header__logo-mob">
+      <img class="logo-mobile logo" src="img/icons/logotype-mobile.svg" alt="Логотип">
+    </a> -->
+     <button class="burger js-burger"></button>
+     </div>
+    </div>
 </header>
