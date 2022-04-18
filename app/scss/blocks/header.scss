@@ -92,7 +92,12 @@
 		}
 
 		&-space {
-			flex-grow: 1;
+			display: none;
+			
+			@include media($md) {
+				display: block;
+				flex-grow: 1;
+			}
 		}
 	}
 
