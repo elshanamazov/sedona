@@ -69,9 +69,13 @@
 
 	&__item {
 		background-color: var(--c-bg-primary);
-		border-bottom: 1px solid  0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
 		padding: 10px 0 5px 0;
 		flex: 1;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		&:first-child {
+			border-top: 0;
+		}
 
 		&:hover {
          background-color: var(--c-bg-primary-hover);
@@ -100,7 +104,7 @@
 		text-align: center;
 
       @include media($md){
-         padding: 16px 34px;
+         padding: 16px 0;
          font-size: 14px;
          line-height: 26px;
          border-bottom: 0;
@@ -110,10 +114,6 @@
          &:hover {
             color: var(--c-bg-primary);  
          }
-      }
-
-		@include media($lg){
-			padding: 16px 75px;
       }
    }
 
