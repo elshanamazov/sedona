@@ -90,6 +90,10 @@
 				background-color: transparent;
 			}
 		}
+
+		&-space {
+			flex-grow: 1;
+		}
 	}
 
    &__link {
