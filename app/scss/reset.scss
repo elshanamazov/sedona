@@ -5,5 +5,31 @@
 }
 
 img {
-  vertical-align: top;
+	vertical-align: top;
+	max-width: 100%;
+	height: auto;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: $basic-family;
+	line-height: 1;
+}
+
+.wrapper {
+	width:100%;
+	max-width: 1200px;
+	min-height:100%;
+	overflow:hidden;
+	display:flex;
+	flex-direction:column;
+	margin: 0 auto;
+	background: var(--color-secondary);
+
+	@include media($lg){
+		box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+	 }
 }

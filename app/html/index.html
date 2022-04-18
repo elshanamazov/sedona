@@ -9,21 +9,16 @@
 </head>
 
 <body>
-    <!-- пример подключения картинок, и html-блоков, удалить перед началом работы -->
-        <!-- подключаем шапку -->
-        @@include('blocks/header.html')
-            <main>
-                <section class="intro">
-                    <div class="container">
-                        <svg class="intro__svg">
-                            <use xlink:href="img/icons/sprite.svg#text-index"></use>
-                        </svg>
-                    </div>
-                </section>
-            </main>
+       <div class="wrapper">
+			  <!-- подключаем шапку -->
+			  @@include('blocks/header.html')
+			  <main>
+					
+			  </main>
 
-        <!-- подключаем подвал -->
-        @@include('blocks/footer.html')
+		 <!-- подключаем подвал -->
+		 @@include('blocks/footer.html')
+		 </div>
     <!-- подключаем js -->
     <script src="js/main.js"></script>
 </body>

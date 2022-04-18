@@ -2,26 +2,35 @@
     <div class="container">
      <div class="header__wrap">
       <nav class="header__nav js-nav">
-        <a href="#" class="header__link">Главная</a>
-        <a href="#" class="header__link">Фото и видео</a>
-        <!-- <a href="#" class="header__logo-tablet">
-          <img class="logo-tablet logo" src="img/icons/logotype-tablet.svg" alt="Логотип">
-        </a>
-        <a href="#" class="header__logo-descktop">
-          <img class="logo-descktop logo" src="img/icons/logotype-desktop.svg" alt="Логотип">
-        </a>  -->
-        <picture class="header__logo">
-          <source srcset="img/icons/logotype-desktop.svg" media="(min-width: 1200px)">
-          <source srcset="img/icons/logotype-tablet.svg" media="(min-width: 768px)">
-          <img class="logo" src="img/icons/logotype-mobile.svg" alt="Логотип сайта">
-        </picture>
-        <a href="#" class="header__link">Форма Отзыва</a>
-        <a href="#" class="header__link">Html Academy</a>
+
+			<ul class="header__menu">
+				<li class="header__item">
+					<a href="" class="header__link">Главная</a>
+				</li>
+				<li class="header__item">
+					<a href="" class="header__link">Фото и видео</a>
+				</li>
+					
+				<li class="header__item">
+					<a href="" class="header__link">Форма Отзыва</a>
+				</li>
+				<li class="header__item">
+					<a href="" class="header__link">Html Academy</a>
+				</li>
+			</ul>
      </nav>
-     <!-- <a href="#" class="header__logo-mob">
-      <img class="logo-mobile logo" src="img/icons/logotype-mobile.svg" alt="Логотип">
-    </a> -->
-     <button class="burger js-burger"></button>
+	  <picture class="header__logo">
+		<source srcset="img/icons/logotype-desktop.svg" media="(min-width: 1200px)">
+		<source srcset="img/icons/logotype-tablet.svg" media="(min-width: 768px)">
+		<img class="logo" src="img/icons/logotype-mobile.svg" alt="Логотип сайта">
+	 </picture>
+     <button class="burger js-burger" type="button" title="Открыть меню"></button>
      </div>
     </div>
+
+	 <div class="header__intro">
+		 <div class="header__intro-img">
+			<img class="img" src="img/icons/text-index.png" alt="Welcome Sedona">
+		 </div>
+  </div>
 </header>
