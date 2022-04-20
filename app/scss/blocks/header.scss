@@ -24,28 +24,10 @@
       height: auto;
       left: 0;
       top: 0;
-      transform: translateY(-100%);
+      transform: translateY(-110%);
       z-index: 22;
       transition: transform .2s ease-in;
 
-      &._active{
-         transform: translateY(0);
-      }
-
-      &._active .header__logo{
-        display: none;
-      }
-
-      @include media($md){
-        position: static;
-        transform: translateY(0);
-        background-color: initial;
-      }
-   }
-
-	&__menu {
-		list-style-type: none;
-		position: relative;
 		&::before {
 			content: '';
 			position: absolute;
@@ -59,11 +41,46 @@
 			}
 		}
 
+      &._active{
+         transform: translateY(0);
+      }
+
+      &._active .header__logo{
+        display: none;
+      }
+
+      @include media($md){
+			display: flex;
+        position: static;
+        transform: translateY(0);
+        background-color: initial;
+      }
+   }
+
+	&__menu {
+		list-style-type: none;
+
 		@include media($md) {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			flex: 1 1 auto;
+
+			&:first-child {
+				padding-right: 50px;
+			}
+			&:last-child {
+				padding-left: 50px;
+			}
+		}
+
+		@include media($lg) {
+			&:first-child {
+				padding-right: 90px;
+			}
+			&:last-child {
+				padding-left: 90px;
+			}
 		}
 	}
 
@@ -85,19 +102,12 @@
 			background: transparent;
 			border-bottom: 0;
 			padding: 0;
+			min-width: 156px;
 
 			&:hover {
 				background-color: transparent;
 			}
-		}
 
-		&-space {
-			display: none;
-			
-			@include media($md) {
-				display: block;
-				flex-grow: 1;
-			}
 		}
 	}
 
@@ -113,7 +123,7 @@
 		text-align: center;
 
       @include media($md){
-         padding: 16px 0;
+         padding: 15px 0;
          font-size: 14px;
          line-height: 26px;
          border-bottom: 0;
