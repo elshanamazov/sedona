@@ -65,22 +65,7 @@
 			justify-content: space-between;
 			align-items: center;
 			flex: 1 1 auto;
-
-			&:first-child {
-				padding-right: 50px;
-			}
-			&:last-child {
-				padding-left: 50px;
-			}
-		}
-
-		@include media($lg) {
-			&:first-child {
-				padding-right: 90px;
-			}
-			&:last-child {
-				padding-left: 90px;
-			}
+			flex-wrap: wrap;
 		}
 	}
 
@@ -99,6 +84,7 @@
       }
 
 		@include media($md) {
+			width: 14%;
 			background: transparent;
 			border-bottom: 0;
 			padding: 0;
@@ -106,6 +92,10 @@
 
 			&:hover {
 				background-color: transparent;
+			}
+
+			&:nth-child(2) {
+				margin-right: 14%;
 			}
 
 		}
