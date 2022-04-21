@@ -51,9 +51,9 @@
 
       @include media($md){
 			display: flex;
-        position: static;
-        transform: translateY(0);
-        background-color: initial;
+			position: static;
+			transform: translateY(0);
+			background-color: initial;
       }
    }
 
@@ -72,7 +72,6 @@
 	&__item {
 		background-color: var(--c-bg-primary);
 		padding: 10px 0 5px 0;
-		flex: 1;
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 		&:first-child {
@@ -84,20 +83,24 @@
       }
 
 		@include media($md) {
-			width: 14%;
+			width: 20%;
 			background: transparent;
 			border-bottom: 0;
 			padding: 0;
-			min-width: 156px;
+			flex: 1;
 
 			&:hover {
 				background-color: transparent;
 			}
 
 			&:nth-child(2) {
-				margin-right: 14%;
+				margin-right: 20%;
 			}
 
+		}
+
+		@include media ($lg) {
+			flex: none;
 		}
 	}
 
