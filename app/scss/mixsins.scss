@@ -1,0 +1,5 @@
+@mixin media($media-size){
+   @media (min-width: $media-size){
+     @content;
+   }
+ }

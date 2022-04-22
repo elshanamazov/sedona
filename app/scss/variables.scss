@@ -1,5 +1,16 @@
-//bacgrounds
-$body-bg: #ff55;
-
 //fonts
-$basic-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+$basic-family: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
+
+//colors
+:root {
+   --c-bg-primary: #81B3D2;
+   --c-bg-primary-hover: #669EC0;
+   --c-bg-primary-focus: #5496BD;
+   --color-primary: #000000;
+   --color-secondary: #ffff;
+   --color-secondary-opacity: rgba(255, 255, 255, 0.6);
+}
+
+//sizes
+$md: 768px;
+$lg: 1200px;
