@@ -4,9 +4,12 @@ $basic-family: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
 //colors
 :root {
    --c-bg-primary: #81B3D2;
+	--c-bg-card: #EEEEEE;
    --c-bg-primary-hover: #669EC0;
    --c-bg-primary-focus: #5496BD;
    --color-primary: #000000;
+	--color-primary-text: #333333;
+	--color-border: #D6D6D6;
    --color-secondary: #ffff;
    --color-secondary-opacity: rgba(255, 255, 255, 0.6);
 }

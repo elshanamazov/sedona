@@ -159,7 +159,8 @@
 			height: 55px;
 			background:url(../img/icons/intro-triangle.svg) no-repeat;
 			background-position: center;
-			bottom: 0;
+			bottom: -1px;
+			left: 0;
 		}
 
 		&-img {
