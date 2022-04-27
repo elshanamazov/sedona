@@ -4,7 +4,8 @@
 	&__list {
 		list-style-type: none;
 		margin-left: 0;
-		display: block;
+		display: flex;
+    	flex-wrap: wrap;
 	}
 
 	&__item {
@@ -17,7 +18,10 @@
 		}
 
 		&--modify {
-			width: 33%;
+			width: 100%;
+			@include media($md) {
+				width: 33.3333%;
+			}
 		}
 
 	}
