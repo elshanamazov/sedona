@@ -217,3 +217,10 @@
 		}
 	}
 }
+
+.break {
+	display: none;
+	@include media($md) {
+		display: block;
+	}
+}
