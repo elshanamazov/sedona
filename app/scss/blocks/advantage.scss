@@ -1,58 +1,39 @@
 .advantage {
 	padding-top: 32px;
 
-	&__first {
-		@include media($md) {
-			display: flex;
-		}
-
-		&-bottom {
-			margin-top: 35px;
-			margin-bottom: 35px;
-
-			@include media($md) {
-				display: grid;
-				margin-top: 60px;
-				margin-bottom: 60px;
-				justify-content: space-between;
-				grid-template-columns: 1fr 1fr 1fr;
-				row-gap: 40px;
-				column-gap: 70px;
-			}	
-
-			@include media($lg) {
-				column-gap: 110px;
-			}
-		}
+	&__list {
+		list-style-type: none;
+		margin-left: 0;
+		display: block;
 	}
-	
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		&--bridge {
+			flex-direction: row-reverse;
+		}
+
+		&--modify {
+			width: 33%;
+		}
+
+	}
+
 	&__card {
 		padding: 58px 13px 36px 13px;
-		background: var(--c-bg-primary);
 		position: relative;
+		width: 100%;
 
 		@include media($md) {
 			padding: 38px 32px;
-			max-width: 256px;
+			width: 35%;
 		}
-
+		
 		@include media($lg) {
 			padding: 50px;
-			max-width: 400px;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 36px;
-			background: url(../img/icons/card-modify.svg) center/cover no-repeat;
-			top: -1px;
-			left: 0;
-
-			@include media($md) {
-				display: none;
-			}
 		}
 
 		&-title {
@@ -89,32 +70,69 @@
 
 		&-img {
 			height: 260px;
-			flex: 1 1 auto;
-
+			overflow: hidden;
+			@include media($md) {
+				width: 65%;
+			}
 			& .img {
 				object-fit: cover;
-				height: 100%;
 				width: 100%;
+				height: 100%;
 			}
 		}
-
 	}
 
-	&__item {
-		padding-left: 50px;
-		margin-bottom: 20px;
-		position: relative;
+	.advantage__bonus {
+		margin-top: 35px;
+		margin-bottom: 35px;
+		padding: 0 20px;
+		list-style-type: none;
 
 		@include media($md) {
-			padding-left:30px;
-			padding-right: 30px;
-			&:nth-child(2) {
-				order: 3;
+			display: grid;
+			margin-top: 60px;
+			margin-bottom: 60px;
+			justify-content: space-between;
+			grid-template-columns: 1fr 1fr 1fr;
+			row-gap: 40px;
+			column-gap: 70px;
+			padding: 0 32px;
+		}	
+
+		@include media($lg) {
+			column-gap: 110px;
+			padding: 0 53px;
+		}
+
+		&-item {
+			padding-left: 50px;
+			margin-bottom: 20px;
+			position: relative;
+			@include media ($md) {
+				padding-left: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
-		&:last-child {
-			margin-bottom: 0;
+
+		&-img {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			@include media($md) {
+				width: 75px;
+				height: 72px;
+				position: static;
+				margin-right: auto;
+				margin-left: auto;
+				margin-bottom: 20px;
+			}
+
 		}
+
 		&-title {
 			max-width: 100%;
 			margin-left: 0;
@@ -140,75 +158,50 @@
 				line-height: 21px;
 			}
 		}
+	}
 
-		&-img {
-			display: block;
+	// modify class
+	.card-triangle {
+		&::before {
+			content: "";
 			position: absolute;
-			left: 0;
-			top: 0;
+			width: 100%	;
+			height: 36px;
+			background: url(../img/icons/card-triangle.svg) center/cover no-repeat;
+			top: -1px;
+			left: 50%;
+			transform: translateX(-50%);
 
 			@include media($md) {
-				width: 75px;
-				height: 72px;
-				position: static;
-				margin-right: auto;
-				margin-left: auto;
-				margin-bottom: 20px;
+				display: none;
 			}
-	
-		}
-
-	}
-
-	&__second {
-		@include media($md) {
-			display: flex;
-			flex-direction: row-reverse;
-		}
-		& .advantage__card::before {
-			display: none;
 		}
 	}
 
-	&__wrap {
-		background-color: var(--c-bg-card);
-
-		@include media ($md) {
-			& .container {
-				display: flex;
-				justify-content: space-between;
-
-				& .advantage__card:first-child, .advantage__card:last-child {
-					padding-left: 12px;
-					padding-right: 12px;
-				}
-			}
-		}
-
-		
-		@include media ($lg) {
-			& .container {
-				display: flex;
-				justify-content: space-between;
-
-				& .advantage__card:first-child, .advantage__card:last-child {
-					padding-left: 30px;
-					padding-right: 30px;
-				}
-			}
-		}
-
+	.card-bg-blue {
+		background: var(--c-bg-primary);
 	}
 
-	&__three, &__four, &__five {
-		background-color: var(--c-bg-card);
-		border-bottom: 1px solid var(--color-border);
-		&::before {
-			display: none;
+	.card-bg-grey {
+		background: var(--c-bg-card);
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			min-width: 280px;
+			height: 1px;
+			background: var(--color-border);
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+
+			@include media ($md) {
+				display: none;
+			}
 		}
 
 		@include media($md) {
-			border-bottom: 0;
+			width: 100%;
 		}
 
 		& .advantage__card-title {
