@@ -75,10 +75,6 @@
 		padding: 10px 0 5px 0;
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-		&:first-child {
-			border-top: 0;
-		}
-
 		&:last-child {
 			border-bottom: 0;
 		}
@@ -159,7 +155,8 @@
 			height: 55px;
 			background:url(../img/icons/intro-triangle.svg) no-repeat;
 			background-position: center;
-			bottom: 0;
+			bottom: -1px;
+			left: 0;
 		}
 
 		&-img {
