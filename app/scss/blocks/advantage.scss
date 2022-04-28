@@ -73,7 +73,7 @@
 		}
 
 		&-img {
-			height: 260px;
+			min-height: 260px;
 			overflow: hidden;
 			@include media($md) {
 				width: 65%;
