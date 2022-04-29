@@ -62,7 +62,7 @@
   }
  }
 
- .title {
+.title {
 		max-width: 520px;
 		margin-right: auto;
 		margin-left: auto;
@@ -100,5 +100,23 @@
 	@include media ($lg) {
 		margin-bottom: 40px;
 	}
- }
+}
+
+.btn {
+	font-family: $basic-family;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 26px;
+	display: block;
+	text-decoration: none;
+	color: var(--color-secondary);
+	background-color: var(--c-bg-primary);
+	padding: 15px 0;
+	max-width: 428px;
+	text-align: center;
+	transition: background-color .2s ease-in;
+	&:hover {
+		background-color: var(--c-bg-primary-hover);
+	}
+}
  
