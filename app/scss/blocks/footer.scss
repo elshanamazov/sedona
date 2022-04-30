@@ -63,6 +63,7 @@
 		justify-content: center;
 		align-items: center;
 		text-decoration: none;
+
 		&-title {
 			font-family: $basic-family;
 			font-size: 14px;
@@ -74,6 +75,7 @@
 		}
 
 		&-icon {
+			display: block;
 			width: 27px;	
 			height: 34px;
 		}
