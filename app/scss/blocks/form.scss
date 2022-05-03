@@ -110,6 +110,10 @@
 				display: flex;
 				flex-wrap: wrap;
 			}
+
+			& .fieldset__title {
+				margin-bottom: 47px;
+			}
 		}
 
 		&__experience {
@@ -270,7 +274,7 @@
 			width: 50%;
 			flex-direction: inherit;
 			align-items: center;
-			margin-top: 50px;
+			margin-bottom: 0;
 		}
 	}
 
