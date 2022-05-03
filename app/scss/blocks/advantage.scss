@@ -1,5 +1,11 @@
 .advantage {
 	padding-top: 32px;
+	@include media($md) {
+		padding-top: 42px;
+	}
+	@include media($lg) {
+		padding-top: 55px;
+	}
 
 	&__list {
 		list-style-type: none;

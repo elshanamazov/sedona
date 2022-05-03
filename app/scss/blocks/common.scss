@@ -108,6 +108,7 @@
 	font-size: 21px;
 	line-height: 26px;
 	display: block;
+	border: 0;
 	text-decoration: none;
 	color: var(--color-secondary);
 	background-color: var(--c-bg-primary);
@@ -117,6 +118,11 @@
 	transition: background-color .2s ease-in;
 	&:hover {
 		background-color: var(--c-bg-primary-hover);
+	}
+
+	&--secondary {
+		padding: 15px 33px;
+		width: 100%;
 	}
 }
  
