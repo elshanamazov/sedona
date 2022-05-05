@@ -2,17 +2,17 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма отзыва</title>
-    <link rel="stylesheet" href="css/main.css?t=1651696788890">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма отзыва</title>
+  <link rel="stylesheet" href="css/main.css?t=1651752049411">
 </head>
 
 <body>
-	<div class="wrapper">
-		<!-- подключаем шапку -->
-		
-<picture><source srcset="img/mobile.avif" type="image/avif"><source srcset="img/mobile.webp" type="image/webp"><img hidden  src="img/mobile.png" alt="" class="pp"></picture>
+  <div class="wrapper">
+    <!-- подключаем шапку -->
+    
+<img hidden  src="img/mobile.png" alt="" class="pp">
 
 <style>
 	.pp {
@@ -61,139 +61,142 @@
 		 </div>
   </div>
 </header>
-		<main>
-			<section class="feedback">
-				<div class="container">
-					<h2 class="feedback__title title">Оставьте свой отзыв</h2>
-					<p class="feedback__desc desc">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-				</div>
-				<form class="form">
-					<fieldset class="fieldset fieldset__introduce">
-						<div>
-							<legend class="fieldset__title title">Представьтесь:</legend>
-						</div>
-							<div class="fieldset__radio radio">
-								<label class="radio__label" for="name">Имя*:</label>
-								<input id="name" class="radio__name" required type="text">
-							</div>
+    <main>
+      <section class="feedback">
+        <div class="container">
+          <h2 class="feedback__title title">Оставьте свой отзыв</h2>
+          <p class="feedback__desc desc">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
+            вами достопримечательностях</p>
+        </div>
+        <form class="form">
+          <fieldset class="fieldset fieldset__introduce">
+            <div>
+              <legend class="fieldset__title title">Представьтесь:</legend>
+            </div>
+            <div class="fieldset__radio radio">
+              <label class="radio__label" for="name">Имя*:</label>
+              <input id="name" class="radio__name" required type="text">
+            </div>
 
-							<div class="fieldset__radio radio">
-								<label class="radio__label" for="surname">Фамилия*:</label>
-								<input id="surname" class="radio__name" required type="text">
-							</div>
+            <div class="fieldset__radio radio">
+              <label class="radio__label" for="surname">Фамилия*:</label>
+              <input id="surname" class="radio__name" required type="text">
+            </div>
 
-							<div class="fieldset__radio radio">
-								<label class="radio__label" for="secondname">Отчество*:</label>
-								<input id="secondname" class="radio__name" required type="text">
-							</div>
-					</fieldset>
+            <div class="fieldset__radio radio">
+              <label class="radio__label" for="secondname">Отчество*:</label>
+              <input id="secondname" class="radio__name" required type="text">
+            </div>
+          </fieldset>
 
-					<fieldset class="fieldset fieldset__contact">
-						<div class="fieldset__title-wrap">
-							<legend class="fieldset__title title">Контактная информация:</legend>
-						</div>
-							<div class="radio radio__contact">
-								<label class="radio__label radio__label-contact" for="phone"><span class="contact-visible">Контактный</span> телефон*:</label>
-								<div class="radio__wrap">
-									<input id="phone" class="radio__name" type="text" required placeholder="Введите телефон">
-									<div class="radio__icon">
-										<img src="img/icons/phone.svg" alt="Иконка телефона">
-									</div>
-								</div>
-							</div>
-							<div class="radio radio__contact">
-								<label class="radio__label radio__label-contact" for="mail">Электронная почта*:</label>
-								<div class="radio__wrap">
-									<input id="mail" class="radio__name" type="text" required placeholder="Введите e-mail">
-									<div class="radio__icon">
-										<img src="img/icons/phone.svg" alt="Иконка телефона">
-									</div>
-								</div>
-							</div>
-					</fieldset>
+          <fieldset class="fieldset fieldset__contact">
+            <div class="fieldset__title-wrap">
+              <legend class="fieldset__title title">Контактная информация:</legend>
+            </div>
+            <div class="radio radio__contact">
+              <label class="radio__label radio__label-contact" for="phone"><span
+                  class="contact-visible">Контактный</span> телефон*:</label>
+              <div class="radio__wrap">
+                <input id="phone" class="radio__name" type="text" required placeholder="Введите телефон">
+                <div class="radio__icon">
+                  <img src="img/icons/phone.svg" alt="Иконка телефона">
+                </div>
+              </div>
+            </div>
+            <div class="radio radio__contact">
+              <label class="radio__label radio__label-contact" for="mail">Электронная почта*:</label>
+              <div class="radio__wrap">
+                <input id="mail" class="radio__name" type="text" required placeholder="Введите e-mail">
+                <div class="radio__icon">
+                  <img src="img/icons/phone.svg" alt="Иконка телефона">
+                </div>
+              </div>
+            </div>
+          </fieldset>
 
-					<fieldset class="fieldset fieldset__experience">
-						<div>
-							<legend class="fieldset__title title">ВАше Общее впечатление:</legend>
-						</div>
-						<div class="fieldset__radio radio__checkbox radio">
-							<label class="radio__label radio__label-checkbox">
-								<input class="radio__name radio__real" checked type="checkbox">
-								<span class="radio__fake"></span>
-								Скорее положительное
-							</label>
-						</div>
+          <fieldset class="fieldset fieldset__experience">
+            <div>
+              <legend class="fieldset__title title">ВАше Общее впечатление:</legend>
+            </div>
+            <div class="fieldset__radio radio__checkbox radio">
+              <label class="radio__label radio__label-checkbox">
+                <input class="radio__name radio__real" checked type="checkbox">
+                <span class="radio__fake"></span>
+                Скорее положительное
+              </label>
+            </div>
 
-						<div class="fieldset__radio radio__checkbox radio">
-							<label class="radio__label radio__label-checkbox">
-								<input class="radio__name radio__real" type="checkbox">
-								<span class="radio__fake"></span>
-								Скорее отрицательное
-							</label>
-						</div>
+            <div class="fieldset__radio radio__checkbox radio">
+              <label class="radio__label radio__label-checkbox">
+                <input class="radio__name radio__real" type="checkbox">
+                <span class="radio__fake"></span>
+                Скорее отрицательное
+              </label>
+            </div>
 
-						<div class="fieldset__radio radio__checkbox radio">
-							<label class="radio__label radio__label-checkbox">
-								<input class="radio__name radio__real" type="checkbox">
-								<span class="radio__fake"></span>
-								Затрудняюсь ответить
-							</label>
-						</div>
-					</fieldset>
+            <div class="fieldset__radio radio__checkbox radio">
+              <label class="radio__label radio__label-checkbox">
+                <input class="radio__name radio__real" type="checkbox">
+                <span class="radio__fake"></span>
+                Затрудняюсь ответить
+              </label>
+            </div>
+          </fieldset>
 
-					<fieldset class="fieldset fieldset__attraction">
-						<div class="fieldset__title-wrap ">
-							<legend class="fieldset__title title">посещенные достопримечательности:</legend>
-						</div>
-						<div class="fieldset__radio radio__checkbox radio">
-							<label class="radio__label radio__label-checkbox">
-								<input class="radio__name radio__real" checked type="checkbox">
-								<span class="radio__fake radio__fake-second"></span>
-								Мост Дьявола
-							</label>
-						</div>
+          <fieldset class="fieldset fieldset__attraction">
+            <div class="fieldset__title-wrap ">
+              <legend class="fieldset__title title">посещенные достопримечательности:</legend>
+            </div>
+            <div class="fieldset__radio radio__checkbox radio">
+              <label class="radio__label radio__label-checkbox">
+                <input class="radio__name radio__real" checked type="checkbox">
+                <span class="radio__fake radio__fake-second"></span>
+                Мост Дьявола
+              </label>
+            </div>
 
-						<div class="fieldset__radio radio__checkbox radio">
-							<label class="radio__label radio__label-checkbox">
-								<input class="radio__name radio__real" type="checkbox">
-								<span class="radio__fake radio__fake-second"></span>
-								Слайд-парк
-							</label>
-						</div>
+            <div class="fieldset__radio radio__checkbox radio">
+              <label class="radio__label radio__label-checkbox">
+                <input class="radio__name radio__real" type="checkbox">
+                <span class="radio__fake radio__fake-second"></span>
+                Слайд-парк
+              </label>
+            </div>
 
-						<div class="fieldset__radio radio__checkbox radio">
-							<label class="radio__label radio__label-checkbox">
-								<input class="radio__name radio__real" type="checkbox">
-								<span class="radio__fake radio__fake-second"></span>
-								Гора-Колокол
-							</label>
-						</div>
+            <div class="fieldset__radio radio__checkbox radio">
+              <label class="radio__label radio__label-checkbox">
+                <input class="radio__name radio__real" type="checkbox">
+                <span class="radio__fake radio__fake-second"></span>
+                Гора-Колокол
+              </label>
+            </div>
 
-						<div class="fieldset__radio radio__checkbox radio">
-							<label class="radio__label radio__label-checkbox">
-								<input class="radio__name radio__real" type="checkbox">
-								<span class="radio__fake radio__fake-second"></span>
-								Красные скалы
-							</label>
-						</div>
-					</fieldset>
+            <div class="fieldset__radio radio__checkbox radio">
+              <label class="radio__label radio__label-checkbox">
+                <input class="radio__name radio__real" type="checkbox">
+                <span class="radio__fake radio__fake-second"></span>
+                Красные скалы
+              </label>
+            </div>
+          </fieldset>
 
-					<fieldset class="fieldset fieldset__comment">
-						<div class="fieldset__title-wrap">
-							<legend class="fieldset__title title">Опишите свои эмоции:</legend>
-						</div>
-						<textarea class="textarea" id="textarea" required placeholder="Опишите подробно все свои восторги "></textarea>
-						<div class="fieldset__comment-wrap">
-							<button class="btn btn--secondary">ОТПРАВИТЬ ОТЗЫВ</button>
-							<span class="required">* — обязательные поля</span>
-						</div>
-					</fieldset>
-				</form>
-			</section>
-		</main>
+          <fieldset class="fieldset fieldset__comment">
+            <div class="fieldset__title-wrap">
+              <legend class="fieldset__title title">Опишите свои эмоции:</legend>
+            </div>
+            <textarea class="textarea" id="textarea" required
+              placeholder="Опишите подробно все свои восторги "></textarea>
+            <div class="fieldset__comment-wrap">
+              <button class="btn btn--secondary">ОТПРАВИТЬ ОТЗЫВ</button>
+              <span class="required">* — обязательные поля</span>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
 
-  <!-- подключаем подвал -->
-  <footer class="footer">
+    <!-- подключаем подвал -->
+    <footer class="footer">
    <div class="container">
 		<div class="footer__wrap">
 			<a href="#" class="footer__tag">#visitSEDONA</a>
@@ -218,8 +221,8 @@
 	</div>
 </footer>
   </div>
-    <!-- подключаем js -->
-    <script src="js/main.js?t=1651696788890"></script>
+  <!-- подключаем js -->
+  <script src="js/main.js?t=1651752049411"></script>
 </body>
 
 </html>
