@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +8,27 @@
 </head>
 
 <body>
+
+<img hidden src="img/mobile.jpg" alt="" class="pp">
+
+<style>
+	.pp {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%) scale(1);
+		pointer-events: none;
+		opacity: .5;
+		transform-origin: top center;
+		z-index: 999;
+	}
+</style>
   <div class="wrapper">
     <!-- подключаем шапку -->
     @@include('blocks/header.html')
+
+
+
     <main>
       <section class="feedback">
         <div class="container">
@@ -20,10 +37,8 @@
             вами достопримечательностях</p>
         </div>
         <form class="form">
-          <fieldset class="fieldset fieldset__introduce">
-            <div>
-              <legend class="fieldset__title title">Представьтесь:</legend>
-            </div>
+          <fieldset class="fieldset fieldset-introduce">
+            <legend class="fieldset__title title">Представьтесь:</legend>
             <div class="fieldset__radio radio">
               <label class="radio__label" for="name">Имя*:</label>
               <input id="name" class="radio__name" required type="text">
@@ -40,11 +55,9 @@
             </div>
           </fieldset>
 
-          <fieldset class="fieldset fieldset__contact">
-            <div class="fieldset__title-wrap">
+          <fieldset class="fieldset fieldset-contact">
               <legend class="fieldset__title title">Контактная информация:</legend>
-            </div>
-            <div class="radio radio__contact">
+            <div class="radio radio-contact">
               <label class="radio__label radio__label-contact" for="phone"><span
                   class="contact-visible">Контактный</span> телефон*:</label>
               <div class="radio__wrap">
@@ -54,22 +67,20 @@
                 </div>
               </div>
             </div>
-            <div class="radio radio__contact">
+            <div class="radio radio-contact">
               <label class="radio__label radio__label-contact" for="mail">Электронная почта*:</label>
               <div class="radio__wrap">
                 <input id="mail" class="radio__name" type="text" required placeholder="Введите e-mail">
                 <div class="radio__icon">
-                  <img src="img/icons/phone.svg" alt="Иконка телефона">
+                  <img src="img/icons/mail.svg" alt="Иконка телефона">
                 </div>
               </div>
             </div>
           </fieldset>
 
-          <fieldset class="fieldset fieldset__experience">
-            <div>
+          <fieldset class="fieldset fieldset-experience">
               <legend class="fieldset__title title">ВАше Общее впечатление:</legend>
-            </div>
-            <div class="fieldset__radio radio__checkbox radio">
+            <div class="fieldset__radio radio-checkbox radio">
               <label class="radio__label radio__label-checkbox">
                 <input class="radio__name radio__real" checked type="checkbox">
                 <span class="radio__fake"></span>
@@ -77,7 +88,7 @@
               </label>
             </div>
 
-            <div class="fieldset__radio radio__checkbox radio">
+            <div class="fieldset__radio radio-checkbox radio">
               <label class="radio__label radio__label-checkbox">
                 <input class="radio__name radio__real" type="checkbox">
                 <span class="radio__fake"></span>
@@ -85,7 +96,7 @@
               </label>
             </div>
 
-            <div class="fieldset__radio radio__checkbox radio">
+            <div class="fieldset__radio radio-checkbox radio">
               <label class="radio__label radio__label-checkbox">
                 <input class="radio__name radio__real" type="checkbox">
                 <span class="radio__fake"></span>
@@ -94,11 +105,9 @@
             </div>
           </fieldset>
 
-          <fieldset class="fieldset fieldset__attraction">
-            <div class="fieldset__title-wrap ">
+          <fieldset class="fieldset fieldset-attraction">
               <legend class="fieldset__title title">посещенные достопримечательности:</legend>
-            </div>
-            <div class="fieldset__radio radio__checkbox radio">
+            <div class="fieldset__radio radio-checkbox radio">
               <label class="radio__label radio__label-checkbox">
                 <input class="radio__name radio__real" checked type="checkbox">
                 <span class="radio__fake radio__fake-second"></span>
@@ -106,7 +115,7 @@
               </label>
             </div>
 
-            <div class="fieldset__radio radio__checkbox radio">
+            <div class="fieldset__radio radio-checkbox radio">
               <label class="radio__label radio__label-checkbox">
                 <input class="radio__name radio__real" type="checkbox">
                 <span class="radio__fake radio__fake-second"></span>
@@ -114,7 +123,7 @@
               </label>
             </div>
 
-            <div class="fieldset__radio radio__checkbox radio">
+            <div class="fieldset__radio radio-checkbox radio">
               <label class="radio__label radio__label-checkbox">
                 <input class="radio__name radio__real" type="checkbox">
                 <span class="radio__fake radio__fake-second"></span>
@@ -122,7 +131,7 @@
               </label>
             </div>
 
-            <div class="fieldset__radio radio__checkbox radio">
+            <div class="fieldset__radio radio-checkbox radio">
               <label class="radio__label radio__label-checkbox">
                 <input class="radio__name radio__real" type="checkbox">
                 <span class="radio__fake radio__fake-second"></span>
@@ -131,13 +140,11 @@
             </div>
           </fieldset>
 
-          <fieldset class="fieldset fieldset__comment">
-            <div class="fieldset__title-wrap">
+          <fieldset class="fieldset fieldset-comment">
               <legend class="fieldset__title title">Опишите свои эмоции:</legend>
-            </div>
             <textarea class="textarea" id="textarea" required
               placeholder="Опишите подробно все свои восторги "></textarea>
-            <div class="fieldset__comment-wrap">
+            <div class="fieldset-comment-wrap">
               <button class="btn btn--secondary">ОТПРАВИТЬ ОТЗЫВ</button>
               <span class="required">* — обязательные поля</span>
             </div>

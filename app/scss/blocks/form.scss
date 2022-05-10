@@ -49,9 +49,9 @@
   }
 
   & .fieldset {
-    border: 0;
-    padding: 25px 20px;
-    border-top: 1px solid var(--color-border-second);
+  	border: 0;
+	padding: 25px 20px;
+	border-top: 1px solid var(--color-border-second);
 
     @include media($md) {
       border-top: 0;
@@ -66,6 +66,8 @@
     &__title {
       display: block;
       margin-bottom: 20px;
+		position: relative;
+		padding: 0;
 
       @include media($md) {
         font-size: 20px;
@@ -104,7 +106,7 @@
       }
     }
 
-    &__introduce {
+    &-introduce {
       @include media($md) {
         width: 50%;
         padding-left: 60px;
@@ -119,7 +121,7 @@
       }
     }
 
-    &__contact {
+    &-contact {
       width: 100%;
 
       @include media($lg) {
@@ -133,7 +135,7 @@
       }
     }
 
-    &__experience {
+    &-experience {
       @include media($md) {
         order: -1;
         width: 50%;
@@ -146,7 +148,7 @@
       }
     }
 
-    &__comment {
+    &-comment {
       width: 100%;
 
       &-wrap {
@@ -178,7 +180,7 @@
       }
     }
 
-    &__attraction {
+    &-attraction {
       @include media($md) {
         display: flex;
         flex-wrap: wrap;
@@ -197,7 +199,7 @@
         }
       }
 
-      & .radio__checkbox {
+      & .radio-checkbox {
         @include media($md) {
           margin-bottom: 30px;
           width: 50%;
@@ -278,6 +280,7 @@
 
     &::placeholder {
       color: var(--color-primary);
+		opacity: 1;
     }
 
     &:hover {
@@ -292,7 +295,7 @@
 
   }
 
-  &__contact {
+  &-contact {
     flex-direction: column;
     align-items: inherit;
 
