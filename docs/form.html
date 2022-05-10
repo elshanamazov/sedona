@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма отзыва</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css?t=1652224555708">
 </head>
 
 <body>
@@ -26,7 +26,56 @@
   </style>
   <div class="wrapper">
     <!-- подключаем шапку -->
-    @@include('blocks/header.html')
+    
+<img hidden  src="img/mobile.png" alt="" class="pp">
+
+<style>
+	.pp {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%) scale(1);
+		pointer-events: none;
+		opacity: .5;
+		transform-origin: top center;
+		z-index: 999;
+	}
+</style>
+
+<header class="header">
+    <div class="container">
+     <div class="header__wrap">
+      <nav class="header__nav js-nav">
+			<ul class="header__menu">
+				<li class="header__item">
+					<a href="index.html" class="header__link">Главная</a>
+				</li>
+				<li class="header__item">
+					<a href="" class="header__link">Фото и видео</a>
+				</li>
+				<li class="header__item">
+					<a href="form.html" class="header__link">Форма Отзыва</a>
+				</li>
+				<li class="header__item">
+					<a href="" class="header__link">Html Academy</a>
+				</li>
+			</ul>
+     </nav>
+	  <picture class="header__logo">
+		<source srcset="img/icons/logotype-desktop.svg" media="(min-width: 1200px)">
+		<source srcset="img/icons/logotype-tablet.svg" media="(min-width: 768px)">
+		<img class="logo" src="img/icons/logotype-mobile.svg" alt="Логотип сайта">
+	 </picture>
+     <button class="burger js-burger" type="button" title="Открыть меню"></button>
+     </div>
+    </div>
+
+	 <div class="header__intro">
+		 <div class="header__intro-img">
+			<img class="img" src="img/icons/text-index.svg" alt="Welcome Sedona">
+		 </div>
+  </div>
+</header>
 
 
 
@@ -155,10 +204,33 @@
     </main>
 
     <!-- подключаем подвал -->
-    @@include('blocks/footer.html')
+    <footer class="footer">
+   <div class="container">
+		<div class="footer__wrap">
+			<a href="#" class="footer__tag">#visitSEDONA</a>
+			<div class="socials">
+				<a class="socials__link" href="#">
+					<img class="icon" src="img/icons/icon-twitter.svg" alt="Иконка twitter">
+				</a>
+				<a class="socials__link" href="#">
+					<img class="icon" src="img/icons/icon-facebook.svg" alt="Иконка facebook">
+				</a>
+				<a class="socials__link" href="#">
+					<img class="icon" src="img/icons/icon-youtube.svg" alt="Иконка youtube">
+				</a>
+			</div>
+			<a class="footer__copy" href="#">
+				<span class="footer__copy-title">Разработано</span>
+				<svg class="footer__copy-icon">
+					<use xlink:href="img/icons/sprite.svg#htmlacademy"></use>
+			  </svg>
+			</a>
+		</div>
+	</div>
+</footer>
   </div>
   <!-- подключаем js -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?t=1652224555708"></script>
 </body>
 
 </html>

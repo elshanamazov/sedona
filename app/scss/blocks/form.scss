@@ -20,6 +20,18 @@
   &__desc {
     max-width: 435px;
     margin-bottom: 16px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      border-bottom: 1px solid var(--color-border-second);
+    }
 
     @include media($md) {
       margin-bottom: 65px;
@@ -49,9 +61,14 @@
   }
 
   & .fieldset {
-  	border: 0;
-	padding: 25px 20px;
-	border-top: 1px solid var(--color-border-second);
+    border: 0;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--color-border-second);
+    margin-bottom: 24px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
 
     @include media($md) {
       border-top: 0;
@@ -63,46 +80,16 @@
       }
     }
 
+    &__radio {
+      padding: 0 20px;
+    }
+
     &__title {
       display: block;
-      margin-bottom: 20px;
-		position: relative;
-		padding: 0;
+      margin-bottom: 0;
 
       @include media($md) {
         font-size: 20px;
-      }
-
-      &-wrap {
-        @include media($md) {
-          position: relative;
-          width: 100%;
-          grid-column: span 4;
-
-          &::after {
-            content: '';
-            position: absolute;
-            width: 123px;
-            height: 1px;
-            background: var(--color-border-right);
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-          }
-
-          &::before {
-            content: '';
-            position: absolute;
-            width: 123px;
-            height: 1px;
-            background: var(--color-border-right);
-            left: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-          }
-        }
       }
     }
 
@@ -131,7 +118,9 @@
       }
 
       & .fieldset__title {
-        margin-bottom: 47px;
+        @include media($md) {
+          margin-bottom: 47px;
+        }
       }
     }
 
@@ -150,6 +139,11 @@
 
     &-comment {
       width: 100%;
+      padding: 0 20px;
+
+      & .fieldset__title {
+        margin-bottom: 15px;
+      }
 
       &-wrap {
         display: flex;
@@ -166,16 +160,6 @@
           font-size: 14px;
           line-height: 26px;
           text-transform: uppercase;
-        }
-      }
-
-      & .fieldset__title {
-        @include media($md) {
-          margin-bottom: 47px;
-        }
-
-        @include media($md) {
-          margin-bottom: 54px;
         }
       }
     }
@@ -280,7 +264,7 @@
 
     &::placeholder {
       color: var(--color-primary);
-		opacity: 1;
+      opacity: 1;
     }
 
     &:hover {
@@ -381,12 +365,12 @@
         background: transparent;
         background: url(../img/icons/tick.svg) no-repeat;
         width: 23px;
-		  height: 17px;
-		  left: 0;
-		  right: 0;
-		  bottom: 0;
-		  top: 0;
-		  margin: auto;
+        height: 17px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
       }
     }
   }
