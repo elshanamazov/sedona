@@ -68,7 +68,7 @@
 		margin-left: auto;
 		font-family: $basic-family;
 		font-weight: 700;
-		font-size: 19px;
+		font-size: 18px;
 		line-height: 26px;
 		color: var(--color-primary);
 		text-align: center;
@@ -124,6 +124,11 @@
 	&--secondary {
 		padding: 15px 33px;
 		width: 100%;
+		max-width: 325px;
+
+		@include media ($lg) {
+			max-width: 480px;
+		}
 	}
 }
  

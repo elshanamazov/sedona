@@ -179,3 +179,22 @@
 		}
 	}
 }
+
+.header__intro--inner {
+	min-height: 151px;
+	background-position: right;
+
+	@include media($md) {
+		min-height: 290px;
+	}
+	& .header__intro-img {
+		padding: 38px 45px;
+		@include media($md) {
+			padding: 95px 10px;;
+		}
+
+		& .img{
+			width: 100%;
+		}
+	}
+}

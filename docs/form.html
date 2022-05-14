@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма отзыва</title>
-  <link rel="stylesheet" href="css/main.css?t=1652224555708">
+  <link rel="stylesheet" href="css/main.css?t=1652547755172">
 </head>
+
 
 <body>
 
-  <img hidden src="img/mobile.jpg" alt="" class="pp">
+  <img src="img/desktop.jpg" alt="" class="pp">
 
   <style>
     .pp {
@@ -26,58 +27,40 @@
   </style>
   <div class="wrapper">
     <!-- подключаем шапку -->
-    
-<img hidden  src="img/mobile.png" alt="" class="pp">
+    <header class="header">
+	<div class="container">
+	 <div class="header__wrap">
+	  <nav class="header__nav js-nav">
+		  <ul class="header__menu">
+			  <li class="header__item">
+				  <a href="index.html" class="header__link">Главная</a>
+			  </li>
+			  <li class="header__item">
+				  <a href="" class="header__link">Фото и видео</a>
+			  </li>
+			  <li class="header__item">
+				  <a href="form.html" class="header__link">Форма Отзыва</a>
+			  </li>
+			  <li class="header__item">
+				  <a href="" class="header__link">Html Academy</a>
+			  </li>
+		  </ul>
+	 </nav>
+	 <picture class="header__logo">
+	  <source srcset="img/icons/logotype-desktop.svg" media="(min-width: 1200px)">
+	  <source srcset="img/icons/logotype-tablet.svg" media="(min-width: 768px)">
+	  <img class="logo" src="img/icons/logotype-mobile.svg" alt="Логотип сайта">
+	</picture>
+	 <button class="burger js-burger" type="button" title="Открыть меню"></button>
+	 </div>
+	</div>
 
-<style>
-	.pp {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%) scale(1);
-		pointer-events: none;
-		opacity: .5;
-		transform-origin: top center;
-		z-index: 999;
-	}
-</style>
-
-<header class="header">
-    <div class="container">
-     <div class="header__wrap">
-      <nav class="header__nav js-nav">
-			<ul class="header__menu">
-				<li class="header__item">
-					<a href="index.html" class="header__link">Главная</a>
-				</li>
-				<li class="header__item">
-					<a href="" class="header__link">Фото и видео</a>
-				</li>
-				<li class="header__item">
-					<a href="form.html" class="header__link">Форма Отзыва</a>
-				</li>
-				<li class="header__item">
-					<a href="" class="header__link">Html Academy</a>
-				</li>
-			</ul>
-     </nav>
-	  <picture class="header__logo">
-		<source srcset="img/icons/logotype-desktop.svg" media="(min-width: 1200px)">
-		<source srcset="img/icons/logotype-tablet.svg" media="(min-width: 768px)">
-		<img class="logo" src="img/icons/logotype-mobile.svg" alt="Логотип сайта">
-	 </picture>
-     <button class="burger js-burger" type="button" title="Открыть меню"></button>
-     </div>
-    </div>
-
-	 <div class="header__intro">
-		 <div class="header__intro-img">
-			<img class="img" src="img/icons/text-index.svg" alt="Welcome Sedona">
-		 </div>
-  </div>
+	<div class="header__intro header__intro--inner">
+		<div class="header__intro-img">
+		  <img class="img" src="img/icons/sedona.svg" alt="Welcome Sedona">
+		</div>
+ </div>
 </header>
-
-
 
     <main>
       <section class="feedback">
@@ -113,7 +96,7 @@
               <div class="radio__wrap">
                 <input id="phone" class="radio__name" type="text" required placeholder="Введите телефон">
                 <div class="radio__icon">
-                  <img src="img/icons/phone.svg" alt="Иконка телефона">
+                  <img src="img/icons/mail.svg" alt="Иконка телефона">
                 </div>
               </div>
             </div>
@@ -122,7 +105,7 @@
               <div class="radio__wrap">
                 <input id="mail" class="radio__name" type="text" required placeholder="Введите e-mail">
                 <div class="radio__icon">
-                  <img src="img/icons/mail.svg" alt="Иконка телефона">
+                  <img src="img/icons/phone.svg" alt="Иконка телефона">
                 </div>
               </div>
             </div>
@@ -230,7 +213,7 @@
 </footer>
   </div>
   <!-- подключаем js -->
-  <script src="js/main.js?t=1652224555708"></script>
+  <script src="js/main.js?t=1652547755172"></script>
 </body>
 
 </html>

@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
+
 <body>
 
-  <img hidden src="img/mobile.jpg" alt="" class="pp">
+  <img src="img/desktop.jpg" alt="" class="pp">
 
   <style>
     .pp {
@@ -26,9 +27,7 @@
   </style>
   <div class="wrapper">
     <!-- подключаем шапку -->
-    @@include('blocks/header.html')
-
-
+    @@include('blocks/header-inner.html')
 
     <main>
       <section class="feedback">
@@ -64,7 +63,7 @@
               <div class="radio__wrap">
                 <input id="phone" class="radio__name" type="text" required placeholder="Введите телефон">
                 <div class="radio__icon">
-                  <img src="img/icons/phone.svg" alt="Иконка телефона">
+                  <img src="img/icons/mail.svg" alt="Иконка телефона">
                 </div>
               </div>
             </div>
@@ -73,7 +72,7 @@
               <div class="radio__wrap">
                 <input id="mail" class="radio__name" type="text" required placeholder="Введите e-mail">
                 <div class="radio__icon">
-                  <img src="img/icons/mail.svg" alt="Иконка телефона">
+                  <img src="img/icons/phone.svg" alt="Иконка телефона">
                 </div>
               </div>
             </div>
