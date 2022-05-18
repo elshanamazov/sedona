@@ -68,7 +68,7 @@
 		margin-left: auto;
 		font-family: $basic-family;
 		font-weight: 700;
-		font-size: 19px;
+		font-size: 18px;
 		line-height: 26px;
 		color: var(--color-primary);
 		text-align: center;
@@ -108,15 +108,27 @@
 	font-size: 21px;
 	line-height: 26px;
 	display: block;
+	border: 0;
 	text-decoration: none;
 	color: var(--color-secondary);
 	background-color: var(--c-bg-primary);
 	padding: 15px 0;
 	max-width: 428px;
 	text-align: center;
+	cursor: pointer;
 	transition: background-color .2s ease-in;
 	&:hover {
 		background-color: var(--c-bg-primary-hover);
+	}
+
+	&--secondary {
+		padding: 15px 33px;
+		width: 100%;
+		max-width: 325px;
+
+		@include media ($lg) {
+			max-width: 480px;
+		}
 	}
 }
  
