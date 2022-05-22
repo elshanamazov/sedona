@@ -1,200 +1,205 @@
 .header {
-   background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
 
-   @include media($md){
+  @include media($md) {
+    padding: 0;
+  }
+
+  &__wrap {
+    padding: 17px 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    @include media($md) {
+      justify-content: space-between;
       padding: 0;
-   }
-   &__wrap {
-		padding: 17px 0;
-      display: flex;
-      align-items: center;
-      justify-content: right;
+      position: relative;
+    }
+  }
 
-      @include media($md){
-         justify-content: space-between;
-			padding: 0;
-			position: relative;
+  &__nav {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    transform: translateY(-110%);
+    z-index: 22;
+    transition: transform .2s ease-in;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+      width: 100%;
+      height: 7px;
+      bottom: 0;
+      left: 0;
+
+      @include media($md) {
+        background: none;
       }
-   }
+    }
 
-   &__nav {
-      display: block;
+    &._active {
+      transform: translateY(0);
+    }
+
+    &._active .header__logo {
+      display: none;
+    }
+
+    @include media($md) {
+      display: flex;
+      position: static;
+      transform: translateY(0);
+      background-color: initial;
+    }
+  }
+
+  &__menu {
+    list-style-type: none;
+
+    @include media($md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1 1 auto;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    background-color: var(--c-bg-primary);
+    padding: 10px 0 5px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background-color: var(--c-bg-primary-hover);
+    }
+
+    @include media($md) {
+      width: 20%;
+      background: transparent;
+      border-bottom: 0;
+      padding: 0;
+      flex: auto;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:nth-child(2) {
+        margin-right: 20%;
+      }
+
+    }
+
+    @include media ($lg) {
+      flex: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-family: $basic-family;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    text-align: center;
+
+    @include media($md) {
+      padding: 15px 0;
+      font-size: 14px;
+      line-height: 26px;
+      border-bottom: 0;
+      color: var(--color-primary);
+      transition: color .2s ease-in;
+
+      &:hover {
+        color: var(--c-bg-primary);
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &__intro {
+    background: url(../img/back-intro.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 389px;
+    min-width: 320px;
+    position: relative;
+
+    &::after {
+      content: '';
       position: absolute;
       width: 100%;
-      height: auto;
+      height: 55px;
+      background: url(../img/icons/intro-triangle.svg) no-repeat;
+      background-position: center;
+      bottom: -1px;
       left: 0;
-      top: 0;
-      transform: translateY(-110%);
-      z-index: 22;
-      transition: transform .2s ease-in;
+    }
 
-		&::before {
-			content: '';
-			position: absolute;
-			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-			width: 100%;
-			height: 7px;
-			bottom: 0;
-			left: 0;
+    &-img {
+      padding-top: 81px;
+      margin: auto;
+      width: 280px;
+      transition: width .3s ease-in, height .2s ease-in;
 
-			@include media($md) {
-				background: none;
-			}
-		}
-
-      &._active{
-         transform: translateY(0);
+      @include media($md) {
+        width: 460px;
+        padding-top: 74px;
+        padding-bottom: 90px;
       }
 
-      &._active .header__logo{
-        display: none;
+      @include media($lg) {
+        width: 435px;
+        padding-top: 70px;
+        padding-bottom: 80px;
       }
-
-      @include media($md){
-			display: flex;
-			position: static;
-			transform: translateY(0);
-			background-color: initial;
-      }
-   }
-
-	&__menu {
-		list-style-type: none;
-
-		@include media($md) {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			flex: 1 1 auto;
-			flex-wrap: wrap;
-		}
-	}
-
-	&__item {
-		background-color: var(--c-bg-primary);
-		padding: 10px 0 5px 0;
-		border-top: 1px solid rgba(255, 255, 255, 0.2);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-		&:last-child {
-			border-bottom: 0;
-		}
-
-		&:hover {
-         background-color: var(--c-bg-primary-hover);
-      }
-
-		@include media($md) {
-			width: 20%;
-			background: transparent;
-			border-bottom: 0;
-			padding: 0;
-			flex: auto;
-
-			&:hover {
-				background-color: transparent;
-			}
-
-			&:nth-child(2) {
-				margin-right: 20%;
-			}
-
-		}
-
-		@include media ($lg) {
-			flex: none;
-		}
-	}
-
-   &__link {
-      display: block;
-      text-decoration: none;
-      font-family: $basic-family;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 40px;
-      text-transform: uppercase;
-      color: var( --color-secondary);
-		text-align: center;
-
-      @include media($md){
-         padding: 15px 0;
-         font-size: 14px;
-         line-height: 26px;
-         border-bottom: 0;
-         color: var( --color-primary);
-         transition: color .2s ease-in;
-         
-         &:hover {
-            color: var(--c-bg-primary);  
-         }
-      }
-   }
-
-   &__logo {
-      position: absolute;
-     	top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-   }
-
-	&__intro {
-		background: url(../img/back-intro.jpg) no-repeat;
-		background-position: center;
-		background-size: cover;
-		width: 100%;
-		height: 100%;
-		min-height: 389px;
-		min-width: 320px;
-		position: relative;
-
-		&::after {
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 55px;
-			background:url(../img/icons/intro-triangle.svg) no-repeat;
-			background-position: center;
-			bottom: -1px;
-			left: 0;
-		}
-
-		&-img {
-			padding-top: 81px;
-			margin: auto;
-			width: 280px;
-			transition: width .3s ease-in, height .2s ease-in;
-					
-			@include media($md){
-				width: 460px;
-				padding-top: 74px;
-				padding-bottom: 90px;
-			}
-
-			@include media($lg){
-				width: 435px;
-				padding-top: 70px;
-				padding-bottom: 80px;
-			}
-		}
-	}
+    }
+  }
 }
 
 .header__intro--inner {
-	min-height: 151px;
-	background-position: right;
+  min-height: 151px;
+  background-position: right;
 
-	@include media($md) {
-		min-height: 290px;
-	}
-	& .header__intro-img {
-		padding: 38px 45px;
-		@include media($md) {
-			padding: 95px 10px;;
-		}
+  @include media($md) {
+    min-height: 290px;
+  }
 
-		& .img{
-			width: 100%;
-		}
-	}
+  & .header__intro-img {
+    padding: 38px 45px;
+
+    @include media($md) {
+      padding: 95px 10px;
+      ;
+    }
+
+    & .img {
+      width: 100%;
+    }
+  }
 }

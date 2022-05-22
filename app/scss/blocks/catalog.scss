@@ -36,12 +36,60 @@
 .gallery {
   list-style-type: none;
 
+  @include media($md) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @include media($lg) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__item {
     padding: 20px;
     border-top: 1px solid var(--color-border-second);
 
+    @include media($md) {
+      width: 50%;
+      padding: 0;
+      border-top: 0;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    @include media ($lg) {
+      width: 33.3333%;
+    }
+
     &:last-child {
       border-bottom: 1px solid var(--color-border-second);
+
+      @include media($md) {
+        border-bottom: 0;
+      }
+    }
+
+    @include media($md) {
+      &:nth-child(odd):not(:first-child) .gallery__bottom {
+        background-color: var(--c-bg-card);
+
+        @include media ($lg) {
+          background-color: var(--color-primary-opacity);
+        }
+      }
+
+      &:first-child .gallery__photo {
+        height: 380px;
+      }
+    }
+
+    @include media($lg) {
+      position: relative;
     }
   }
 
@@ -53,19 +101,45 @@
 
     cursor: pointer;
 
+    @include media ($md) {
+      height: 267px;
+    }
+
     & .img {
       display: block;
       object-fit: cover;
       height: 100%;
+      width: 100%;
     }
   }
 
   &__bottom {
     margin-top: 10px;
+
+    @include media($md) {
+      margin-top: 0;
+      background-color: var(--color-radio-bg);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+
+    @include media($lg) {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: var(--color-primary-opacity);
+    }
   }
 
   &__info {
     margin-bottom: 10px;
+
+    @include media($md) {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -73,6 +147,10 @@
     font-size: 14px;
     text-align: left;
     margin-bottom: 0;
+
+    @include media($lg) {
+      color: var(--c-bg-card);
+    }
   }
 
   &__desc {
@@ -81,6 +159,10 @@
     text-align: left;
     margin-bottom: 0;
     text-transform: none;
+
+    @include media($lg) {
+      color: var(--c-bg-card);
+    }
   }
 
   &__btn {
@@ -97,7 +179,23 @@
     cursor: pointer;
 
     & .icon {
+      width: 32px;
+      height: 21px;
       margin-right: 15px;
+      opacity: .3;
+
+      @include media($md) {
+        margin-right: 10px;
+      }
+
+      @include media($lg) {
+        fill: var(--c-bg-card);
+        opacity: 1;
+      }
+    }
+
+    @include media($lg) {
+      color: var(--c-bg-card);
     }
   }
 }
