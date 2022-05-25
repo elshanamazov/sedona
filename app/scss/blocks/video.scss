@@ -51,13 +51,34 @@
 
   &__interface {
     padding: 0 20px;
-	 position: relative;
-	 margin-top: -44px;
+    position: relative;
+    margin-top: -44px;
 
-	 & .timeline {
-		 padding: 22px;
-		 background: var(--color-bg-opacity);
-	 }
+    & .timeline {
+      padding: 22px;
+      background: var(--color-bg-opacity);
+
+      &__bar {
+        min-width: 235px;
+        height: 3px;
+        background: var(--color-white-opacity);
+
+        &-slider {
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background: var(--color-secondary);
+            border-radius: 50%;
+            right: 0;
+            top: -5px;
+          }
+        }
+      }
+    }
   }
 
   &__control {
