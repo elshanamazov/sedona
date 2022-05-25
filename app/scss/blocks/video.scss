@@ -174,17 +174,20 @@
   height: 20px;
 }
 
-.replay, .subtitle, .screensize {
-	transition: fill .2s ease-in; 
-	&:hover {
-		fill: var(--color-primary-text);
+.replay,
+.subtitle,
+.screensize {
+  transition: fill .2s ease-in;
 
-		@include media($md) {
-			fill: var(--color-secondary-opacity);
-		}
-	}
+  &:hover {
+    fill: var(--color-primary-text);
 
-	&:disabled {
-		fill: var(--color-primary-opacity);
-	}
+    @include media($md) {
+      fill: var(--color-secondary-opacity);
+    }
+  }
+
+  &:disabled {
+    fill: var(--color-primary-opacity);
+  }
 }
