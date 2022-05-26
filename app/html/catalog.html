@@ -40,14 +40,18 @@
         <ul class="gallery">
           <li class="gallery__item">
             <a href="#" class="gallery__photo">
-              <img class="img" src="img/photo-road.jpg" alt="неродные просторы">
+              <picture class="img-wrap">
+                <source srcset="img/photo-road.jpg" media="(min-width: 1200px)">
+                <source srcset="img/photo-road-tablet.jpg" media="(min-width: 768px)">
+                <img class="img" src="img/photo-road-tablet.jpg" alt="неродные просторы">
+              </picture>
             </a>
             <div class="gallery__bottom">
               <div class="gallery__info">
                 <h3 class="gallery__title title">неродные просторы</h3>
                 <p class="gallery__desc desc">Автор фото: Борис</p>
               </div>
-              <button class="gallery__btn">
+              <button class="gallery__btn" type="button">
                 <svg class="icon">
                   <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                 </svg>
@@ -58,14 +62,18 @@
 
           <li class="gallery__item">
             <a href="#" class="gallery__photo">
-              <img class="img" src="img/photo-plant.jpg" alt="Местные растения">
+              <picture class="img-wrap">
+                <source srcset="img/photo-plant.jpg" media="(min-width: 1200px)">
+                <source srcset="img/photo-plant-tablet.jpg" media="(min-width: 768px)">
+                <img class="img" src="img/photo-plant-mobile.jpg" alt="Местная растительность">
+              </picture>
             </a>
             <div class="gallery__bottom">
               <div class="gallery__info">
                 <h3 class="gallery__title title">Местная растительность</h3>
                 <p class="gallery__desc desc">Автор фото: Сергей</p>
               </div>
-              <button class="gallery__btn">
+              <button class="gallery__btn" type="button">
                 <svg class="icon">
                   <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                 </svg>
@@ -76,14 +84,18 @@
 
           <li class="gallery__item">
             <a href="#" class="gallery__photo">
-              <img class="img" src="img/photo-forest.jpg" alt="Дорога на север">
+              <picture class="img-wrap">
+                <source srcset="img/photo-forest.jpg" media="(min-width: 1200px)">
+                <source srcset="img/photo-forest-tablet.jpg" media="(min-width: 768px)">
+                <img class="img" src="img/photo-forest-mobile.jpg" alt="Дорога на север">
+              </picture>
             </a>
             <div class="gallery__bottom">
               <div class="gallery__info">
                 <h3 class="gallery__title title">неродные просторы</h3>
                 <p class="gallery__desc desc">Автор фото: Борис</p>
               </div>
-              <button class="gallery__btn">
+              <button class="gallery__btn" type="button">
                 <svg class="icon">
                   <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                 </svg>
@@ -94,14 +106,18 @@
 
           <li class="gallery__item">
             <a href="#" class="gallery__photo">
-              <img class="img" src="img/photo-devil-bridge.jpg" alt="неродные просторы">
+              <picture class="img-wrap">
+                <source srcset="img/photo-devil-bridge.jpg" media="(min-width: 1200px)">
+                <source srcset="img/photo-devil-bridge-tablet.jpg" media="(min-width: 768px)">
+                <img class="img" src="img/photo-devil-bridge-mobile.jpg" alt="Мост дьявола">
+              </picture>
             </a>
             <div class="gallery__bottom">
               <div class="gallery__info">
                 <h3 class="gallery__title title">Мост дьявола</h3>
                 <p class="gallery__desc desc">Автор фото: Антон</p>
               </div>
-              <button class="gallery__btn js-like">
+              <button class="gallery__btn js-like" type="button">
                 <svg class="icon">
                   <use xlink:href="img/icons/sprite.svg#like-icon"></use>
                 </svg>
@@ -131,17 +147,17 @@
             </div>
 
             <div class="video__control">
-              <button aria-label="Повторить" class="video__control-btn">
+              <button aria-label="Повторить" class="video__control-btn" type="button">
                 <svg class="video__control-icon replay">
                   <use xlink:href="img/icons/sprite.svg#replay"></use>
                 </svg>
               </button>
-              <button class="video__control-btn" aria-label="Субтитры">
+              <button class="video__control-btn" aria-label="Субтитры" type="button">
                 <svg class="video__control-icon subtitle">
                   <use xlink:href="img/icons/sprite.svg#subtitles"></use>
                 </svg>
               </button>
-              <button class="video__control-btn" aria-label="Увеличить экран">
+              <button class="video__control-btn" aria-label="Увеличить экран" type="button">
                 <svg class="video__control-icon screensize">
                   <use xlink:href="img/icons/sprite.svg#fullscreen"></use>
                 </svg>
