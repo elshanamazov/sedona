@@ -56,6 +56,7 @@
       position: static;
       transform: translateY(0);
       background-color: initial;
+      z-index: 2;
     }
   }
 
@@ -129,6 +130,18 @@
       &:hover {
         color: var(--c-bg-primary);
       }
+
+      &:focus {
+        color: var(--color-border-second);
+      }
+
+      &._active:hover {
+        color: var(--color-active-hover);
+      }
+
+      &._active:focus {
+        opacity: .3;
+      }
     }
   }
 
@@ -137,11 +150,12 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
+    cursor: pointer;
   }
 
   &__intro {
-    background: url(../img/back-intro.jpg) no-repeat;
+   //   background: #92999b url(../img/back-intro.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;

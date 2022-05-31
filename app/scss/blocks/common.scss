@@ -123,6 +123,15 @@
     background-color: var(--c-bg-primary-hover);
   }
 
+  &:focus {
+	  background-color: var( --c-bg-primary-focus);
+  }
+
+  &:disabled,
+  &._disabled {
+	  background-color: var(--color-border-second);
+  }
+
   &--secondary {
     padding: 15px 33px;
     width: 100%;

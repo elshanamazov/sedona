@@ -5,26 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма отзыва</title>
+  <link rel="preload" href="fonts/PTSans/PTSans-Bold.ttf" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PTSans/PTSans-Regular.ttf" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 
 <body>
-
-  <img hidden src="img/mobile.jpg" alt="" class="pp">
-
-  <style>
-    .pp {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%) scale(1);
-      pointer-events: none;
-      opacity: .5;
-      transform-origin: top center;
-      z-index: 999;
-    }
-  </style>
   <div class="wrapper">
     <!-- подключаем шапку -->
     @@include('blocks/header-inner.html')
